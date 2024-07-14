@@ -1,0 +1,228 @@
+html,body{
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Nav */
+.main-nav{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+.nav-items{
+    margin-right: 25px;
+    color: #ddd9d9;
+    cursor: pointer;
+}
+.nav-items.active{
+    color: white;
+}
+/* Header css */
+
+header{
+    background-color:transparent;
+    margin-bottom: 10px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: background-color ease 600ms;
+}
+header.black_background{
+    background-color: #141414;
+}
+.left-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fa{
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+}
+.right-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right-cont img{
+    max-width: 36px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.brand-img{
+    margin-left: 20px;
+    max-width: 110px;
+    cursor: pointer;
+}
+/* Banner Section CSS */
+.banner-section{
+    /* max-height: 50%; */
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+    position: relative;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* padding: 20px; */
+    padding-top: 150px;
+    /* margin-top: 100px; */
+    margin-left: 20px;
+    max-width: 40%;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh; */
+}
+.banner_title{
+    color: white;
+    font-size: 78px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    margin: 0;
+    /* max-width: 40%; */
+}
+.banner_info{
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    
+}
+.banner_overview{
+    font-size: 16px;
+    color: white;
+    line-height: 1.3;
+}
+.action-button-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.action-button{
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background-color: white;
+    padding: 8px 23px;
+    margin-right: 11px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.action-button:last-child{
+    background-color: rgb(168, 168, 168);
+    color: white;
+    opacity: 0.5;
+}
+.fa-play{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    /* margin-right: 5px; */
+}
+.fa-info-circle{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 700;
+}
+.banner_fade_bottom{
+    height: 120px;
+    background:linear-gradient(180deg,
+        transparent,
+        rgba(37,37,37,.61),
+        #141414
+    );
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/* Movies section CSS */
+
+.movies-section{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.movies-section-heading{
+    
+    font-size: 20px;
+    font-weight: 700px;
+    line-height: 1.2;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    /* margin-right: 300px; */
+}
+.explore-nudge{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+.movies-section-heading:hover .explore-nudge{
+    display: inline-block;
+}
+.movies-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.movie-item{
+    width: 245px;
+    object-fit: contain;
+    margin-right: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+.movie-item-img{
+    width: inherit;
+}
+.movie-item iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    border:none;
+    outline: none;
+}
+.movie-item:hover iframe{
+    display: block;
+}
+.movie-item:hover{
+    transform: scale(1.3);
+    transition: transform linear 300ms;
+}
+/* RESPONSIVE */
+
+@media  (max-width:767px){
+    .main-nav{
+        display: none;
+    }
+    .banner_overview ,.banner_title{
+        max-width: 100%;
+    }
+}
